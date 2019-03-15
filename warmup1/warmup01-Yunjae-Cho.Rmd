@@ -1,0 +1,92 @@
+---
+title: 'Warmup 01: Markdown Syntax'
+author: "Yunjae Cho"
+date: "February 1, 2019"
+output: github_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+![](https://vignette.wikia.nocookie.net/starwars/images/5/50/Bucket_Resistance.png/revision/latest?cb=20190101032330)
+
+> A famous quote by R1-J5:\
+> "   Beep boop beep."
+
+| _Description_ | _Value_    |
+|-------------|------------- |
+| Date created| 34 ABY  |
+| Class       | Astromech droid |
+| Gender      | Masculine programming   |
+| Affiliation | Alliance to Restore the Republic  |
+
+
+
+##Ingredients
+* Salt
+* 2 tablespoons unsalted butter     
+* 1 pound fresh sweet Italian pork sausages or bulk sausage meat
+* 1 large green or Savoy cabbage (2 pounds), cored and thickly shredded
+* Freshly ground black pepper
+* Crusty bread and coarse mustard
+
+##Speical Kitchen Tools
+ - parchment paper for prevention of vegetable discoloration. 
+
+##Cooking Steps
+1. Heat oven to 300 degrees, and ring a large pot of salted water to a boil and butter a 9-by-13-by-2-inch baking dish. If using sausages, remove casings and discard them./
+
+2. Place cabbage in boiling water, cover, and let water come back to the boil. Uncover and boil for 3 minutes. Drain cabbage in a colander and run cold water over it to stop cooking. Drain well.
+
+![](https://farm2.staticflickr.com/1461/23856827433_7fa8cca8c6_z.jpg)
+
+3. Put about 1/3 of the cabbage in buttered dish and cover with 1/2 the meat. Sprinkle with salt and pepper and dot with butter. Repeat, ending with a final layer of cabbage, and dot top with butter.
+
+
+4. Cover dish tightly with a layer of parchment paper (commenters who skipped the parchment said that their vegetables discolored against the foil), then top with a lid or a layer of aluminum foil. Cook for about 2 1/2 hours, until cabbage is soft and sweet, and top is lightly browned.
+
+![](https://farm2.staticflickr.com/1643/24457432766_d6d26d539a_z.jpg)
+
+5. After 2 hours, uncover the dish
+
+![](https://farm2.staticflickr.com/1572/23856827293_b5704123c6_z.jpg)
+
+6. Serve with crusty bread and coarse mustard
+
+![](https://farm2.staticflickr.com/1706/24375331702_75058d8523_z.jpg)
+
+##Special season for this dish
+ - this is all seasonal dish, but best for breakfast
+
+##Variations of the recipe
+ + If you don't have Italian pork sausages, you can use bulk sausage meat\
+ 
+##More recipes
+ * https://smittenkitchen.com/recipes/5-ingredients-or-fewer/?format=list
+ 
+ 
+#Euclidean distance 
+ 
+ 
+<font size="5">Definition</font>  \   \ <font size="2">[Edit]</font>
+
+***********************************************************************
+The __Euclidean distance__ between points __p__ and __q__ is the length of the line segment connecting them
+$(\overline{\textbf{pq}})$.\
+
+In Cartisian coordinates, if __p__ = ($p_1$, $p_2$, $p_3$,..., $p_n$) and __q__ = ($q_1$, $q_2$, $q_3$,..., $q_n$) are two points in Euclidean n-space, then the distance (d) from __p__ to __q__, or from __q__ to __p__ is given by the Pythagorean formula
+
+$$
+\begin{aligned}
+ d(\textbf{p},\textbf{q}) = d(\textbf{q},\textbf{p}) &= \sqrt{(q_1 - p_1)^2 \ + (q_2 - p_2)^2 \ \cdots \ + (q_n - p_n)^2}\\
+ &= \sqrt{\sum_{i=1}^{n}(q_i - p_i)^2}.
+\end{aligned}
+$$
+The position of a point in a Euclidean n-space is a Euclidean vector. So, __p__ and __q__ may be represented as Euclidean vectors, starting from the origin of the space (initial point) with their tips (terminal points) ending at the two points. The __Euclidean norm__, or __Euclidean length__, or __magnitude__ of a vector measures the length of the vector.
+
+$\|\textbf{p}\| = \sqrt{(p_1)^2 \ + (p_2)^2 \ + \cdots +(p_n)^2} = \sqrt{\textbf{p}\cdot \textbf{p}},$
+
+where the last expression involves the dot product.
+$overline{x}$
