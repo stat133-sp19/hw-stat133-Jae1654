@@ -1,0 +1,107 @@
+---
+title: "Workout1"
+author: "Yunjae Cho"
+output:  github_document
+---
+
+```{r}
+library(dplyr)
+
+```
+
+
+```{r}
+dat <- read.csv(file = "../data/shots-data.csv", stringsAsFactors = FALSE)
+ 
+```
+
+```{r}
+two_table <-  arrange(summarise(
+  group_by(dat,name),
+  total = sum(shot_type == "2PT Field Goal") ,
+  made =  sum(shot_type == "2PT Field Goal" & shot_made_flag == "shot_yes"),
+  percentage = made/total
+), desc(percentage))
+
+three_table <-  arrange(summarise(
+  group_by(dat,name),
+  total = sum(shot_type == "3PT Field Goal") ,
+  made =  sum(shot_type == "3PT Field Goal" & shot_made_flag == "shot_yes"),
+  percentage = made/total), desc(percentage))
+
+alltype_table <-  arrange(summarise(
+  group_by(dat,name),
+  total = sum(shot_type == "2PT Field Goal" | shot_type == "3PT Field Goal") ,
+  made =  sum((shot_type == "2PT Field Goal" | shot_type == "3PT Field Goal") & shot_made_flag == "shot_yes"),
+  percentage = made/total), desc(percentage))
+
+two_table
+
+three_table
+
+alltype_table
+
+```
+#Why are we so enthusiastic about GSW?
+
+There is no doubt that the GSW is the strongest team in the world. They are strong for all kinds of games, but especially at home, the GSW is invinible. They always overwhelms their opponents, even a game that seems to be defeated can lead to overtime or even reverse. In the end, their home 54-game winning streak is the NBA's best ever record.
+ ![](https://www.barrystickets.com/blog/wp-content/uploads/2016/12/golden-state-warriors-win-nba-championship-604x270.jpg)
+Since 2014, Steve Kerr uncovered great players and now, they have become a legend. Stephen Curry and Klay Thompson, who are called Splash Brothers, are among the strongest in the NBA's backcourt, and eventually they have surpassed Michael Jordan's Chicago Bulls in a single season. Moreover, they have Kevin Durant who has reigned as the best scorer for years, Draymond Green with good visibility and strong defense power with Andre Iguodala.
+
+
+ ![](https://mk0slamonlinensgt39k.kinstacdn.com/wp-content/uploads/2015/06/warriors.jpg)
+ 
+The first reason we always get excited when we watch their game is due to their superior ability to score. We even feel relaxed when the five players mentioned above own the ball, because they succeed in scoring with a higher probability than anyone else. Here are some data of their shot percentages.
+ 
+###5 star player's 3 and 2 points success percentage
+
+```{r}  
+alltype_table
+```
+
+
+ If you look at the table, you can see that their shot success rate is close to 50%. __Yet, it is too early to be surprised.__
+ 
+ 
+###2 points success percentage
+
+```{r}
+two_table
+```
+ 
+![](http://ph.spotvnews.co.kr/news/photo/201703/118288_145065_1427.jpg)
+ 
+ > **_2 points? not a problem!_**
+ 
+ 
+The shoot success percentage for above players is over 50, which means that at least one of the two attempts will be successful. However, Andre and Kevin's two-point scorecard could make the data seem wrong. They have a 2-point shot with a probability of over 60%. They are literally a scoring machine. 
+ 
+ 
+###3 points success percentage
+```{r} 
+three_table
+```
+
+![](https://cdn.thinglink.me/api/image/647784219539406850/1240/10/scaletowidth)
+ _(The Splash Brothers: Stephen Curry and Klay Thompson)_
+ 
+As a matter of fact, we must mention the "Splash Brothers" to say about scoring. You might have noticed that they have tried the most shots and their shoot success rate is miraculous. But especially, their three-point shot is close to the two-point shot rate of the other players. 
+
+ 
+ 
+If we analyze why they have such a high score success rate, it can be found in their field of activity. They are very active around the goalpost, not the one-sided attack that makes confusion in the opponent's defense. For us, this aspect approaches to us as a another activity in our head whcih we guess what will be their next move, and this can be said that their the most powerful charm. 
+
+###The position to shoot
+
+![](../images/gsw-shot-charts.png)
+
+###Summary
+
+To sum up, Golden Gate State Warriors is a strong and popular team in many ways. They have remarkable percentage of  both 3-point and 2-point shots, and their a wide range of activities playstyle always guarantee us that they will make interesting game all the time. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
