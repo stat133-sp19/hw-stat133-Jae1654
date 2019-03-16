@@ -1,6 +1,6 @@
 #title: Short chart
 #description: This step will produce the chart plot of player's shot position, also a facceted chart of all players 
-#input: This step requires x and y coordinates of each player's shot position, so that we can plot on the court image 
+#input: We need data of x and y coordinates of each player's shot position, so that we can plot on the court image 
 #output: It will produce pdf plot of position where each player shot, also, pdf and png of facet chart of all players
 
 library(jpeg)
