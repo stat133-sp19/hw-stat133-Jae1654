@@ -1,0 +1,18 @@
+---
+title: "asdf"
+author: "Yunjae"
+date: "5/1/2019"
+output: html_document
+---
+
+```{r}
+library(binomial)
+
+```
+
+
+```{r}
+bin_choose(5,1)
+
+cum <- bin_cumulative(5,.5)
+```

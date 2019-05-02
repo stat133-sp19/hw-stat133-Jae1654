@@ -1,0 +1,6 @@
+"0",""
+"0","res <- reg$residuals"
+"0",""
+"0","df3 <- data.frame(ew,res)"
+"0",""
+"0","df3"

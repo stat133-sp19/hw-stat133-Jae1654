@@ -1,0 +1,2 @@
+"0","chick <- read.table(file = ""chicks-1.txt"",sep = "" "", header = TRUE)"
+"0","chick"

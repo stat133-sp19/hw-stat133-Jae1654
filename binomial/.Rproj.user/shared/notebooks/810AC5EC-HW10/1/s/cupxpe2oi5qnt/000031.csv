@@ -1,0 +1,5 @@
+"0",""
+"0","#a)"
+"0","baby <- read.table(file = ""baby.txt"", header = TRUE)"
+"0",""
+"0","baby %>% ggplot(aes(x = bw, y = ..density..)) + geom_histogram(bins = 17)"

@@ -1,0 +1,2 @@
+"0",""
+"0","qqnorm(reg$residuals); qqline(reg$residuals)"

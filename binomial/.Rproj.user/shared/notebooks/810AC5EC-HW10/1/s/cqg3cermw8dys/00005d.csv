@@ -1,0 +1,8 @@
+"0",""
+"0","#Still has heterocity. plot looks like x^3, so add ploynomial with degree of 3"
+"0",""
+"0","height_cube <- (height)^3"
+"0",""
+"0","reg3 <-  lm(formula = ave ~ height + height_sq +height_cube)"
+"0",""
+"0","women %>% ggplot(aes(x = h, y = reg3$residuals))+geom_point()"

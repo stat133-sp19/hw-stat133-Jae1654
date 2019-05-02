@@ -1,0 +1,6 @@
+"0",""
+"0",""
+"0",""
+"0",""
+"0",""
+"0","#The null hyp for both tests are whether the intercept and slopes are zero.  The T test statitic for intercept is -1.329 and its value is 0.191. Therefore, we fail to reject that the intercept is zero. About the slope, the T test has T.S of 5.947, and p value is very small, also for the F test has t.s of 35.37, and p-value is similar to T test. Thus, we both reject the null that slope is zero."

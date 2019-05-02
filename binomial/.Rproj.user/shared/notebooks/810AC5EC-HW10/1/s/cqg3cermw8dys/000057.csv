@@ -1,0 +1,8 @@
+"0","women <- read.table(file = ""women.txt"", header = TRUE)"
+"0",""
+"0","height <- women$h"
+"0","ave <- women$avew"
+"0",""
+"0","reg1 <- lm(formula = ave ~height)"
+"0",""
+"0","qqnorm(reg1$residuals); qqline(reg1$residuals)"

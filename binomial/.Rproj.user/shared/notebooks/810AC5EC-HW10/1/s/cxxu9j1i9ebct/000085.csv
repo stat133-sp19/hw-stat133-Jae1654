@@ -1,0 +1,8 @@
+"0",""
+"0",""
+"0","# for female plot, it doesn't seem to have relationship between rate and temperature, however, male seems to have little positive relationship"
+"0",""
+"0",""
+"0","#b)"
+"0","ggplot(bodytemp,aes(x = rate, y = temperature,group = gender))+"
+"0","  geom_point(aes(shape = gender, color = gender))"

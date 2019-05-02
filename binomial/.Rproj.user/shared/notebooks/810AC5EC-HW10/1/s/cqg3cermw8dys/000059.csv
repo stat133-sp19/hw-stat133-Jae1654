@@ -1,0 +1,2 @@
+"0",""
+"0","women %>% ggplot(aes(x = h, y = reg1$residuals))+geom_point()"

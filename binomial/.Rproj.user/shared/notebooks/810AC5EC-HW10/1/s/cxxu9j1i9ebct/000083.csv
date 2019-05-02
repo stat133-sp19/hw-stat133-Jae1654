@@ -1,0 +1,3 @@
+"0","#female plot"
+"0","ggplot(femaletemp,aes(x = rate, y= temperature, col = gender))+"
+"0","  geom_point()"

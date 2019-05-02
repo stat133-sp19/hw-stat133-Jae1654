@@ -1,0 +1,97 @@
+---
+title: "introduction"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{introduction}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(binomial)
+```
+
+
+##Binomial
+The package `"binomial"`is a minimal implementation that contains the binomial distribution's features such as mean, variance, skewness etc ,and helps you to compute it. It also helps your to generate distribtion, cumulative table and plot with given parameters.
+
+
+## 1) Basic computation of a binomial distribution
+Binomial distribution's probabilty has to part, that are the combination and probabilty
+You can compute the number way of choosing successes and total trials with `bin_choose(n,k)`,and if you want to compute the probabilty with given probabilty 'p', you can use `bin_probaility`
+```{r}
+#Number of way to choose 3 successes out of 5 trials
+bin_choose(n = 5,k = 3)
+
+#Probabilty of 3 successes out of 5 trials with prob = 0.2
+bin_probability(success = 3, trials = 5,prob = 0.2)
+
+```
+
+## 2) Create distribution tables
+With given binomial parameters, you can construct distribtion and cumulative probability data table by using 'bin_distribution()' and 'bin_cumulative()' function. Theses functions  returns data.frame distribution and cumulative distribution objects with primary class of "bindis" and "bincum" respectively.
+```{r}
+
+dis <- bin_distribution(trials = 5 ,prob =0.4)
+dis
+cum <- bin_cumulative(trials = 5 ,prob =0.4)
+cum
+```
+
+## 3) Plotting the distribtion and cumulative probability table
+You can plot the above distribution and cumualtive probabilty object by using 'plot.bindis' and 'plot.bincum' function 
+```{r}
+plot(dis)
+
+plot(cum)
+
+```
+
+
+
+## 4) Creating a binomial varibale object
+you can create a binomial variable object with using 'bin_variabe' fucntion. Also, this will has object class of 'binvar' so that its parameter can be print with the exported print function. This will be used to create the summarization of binomial compuation.
+```{r}
+var <- bin_variable(5,0.4)
+var
+```
+
+## 5) Print summary of the variable object
+By using 'bin_variable' function, it wil return 'binvar' object. You can take this object and check the summary of the  binomial varible by using `summary()`. It will show you the parameters, and many measures of this variable
+```{r}
+summary(var)
+
+```
+
+##6) Measure computation functions
+You can use the compuational function in this package to see mean, variance etc if you want to compute manually. The following functions are computation functions
+```{r}
+
+bin_mean(10,0.3)
+bin_variance(10,0.3)
+bin_mode(10,0.3)
+bin_skewness(10,0.3)
+bin_kurtosis(10,0.3)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
