@@ -18,3 +18,6 @@ return the dataframe with probability distribution and cumulative probabilities
 compute the probability distribution and the cumulative probabilities with
 givien input
 }
+\examples{
+bin_cumulative(trials = 5, prob = 0.5)
+}

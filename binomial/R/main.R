@@ -1,4 +1,3 @@
-
 #' @title bin_choose
 #' @description compute the combination of k successes out of n trials
 #' @param k number of successes
@@ -14,8 +13,8 @@ bin_choose <- function(n,k){
   if(sum(k > n) >0){
     stop("k cannot be greater than n")
   }else{
-     factorial(n)/(factorial(n-k)*factorial(k))
-    }
+    factorial(n)/(factorial(n-k)*factorial(k))
+  }
 }
 
 #' @title bin_probability
@@ -79,7 +78,7 @@ plot.bindis <- function(x) {
 #' @param prob probability of success
 #' @return return the dataframe with probability distribution and cumulative probabilities
 #' @export
-#' @example
+#' @examples
 #' bin_cumulative(trials = 5, prob = 0.5)
 
 bin_cumulative <- function(trials,prob){
@@ -92,32 +91,32 @@ bin_cumulative <- function(trials,prob){
 
   for(i in 1:length(success)){
     if(i == 1){
-    cum[i] <- prob[i]
+      cum[i] <- prob[i]
     }else{
       cum[i] <- prob[i]+cum[i-1]
     }
   }
 
   df <- data.frame(success=success,
-                    probability = prob,
-                    cumulative = cum)
+                   probability = prob,
+                   cumulative = cum)
   class(df) <- c("bincum", "data.frame")
   return(df)
 
 }
 
 #' @export
- plot.bincum <- function(x){
-   library(ggplot2)
+plot.bincum <- function(x){
+  library(ggplot2)
 
   plot <-  ggplot(data = x, aes(x = success, y = cumulative)) +
-     geom_point()+
-     geom_line()+
+    geom_point()+
+    geom_line()+
     labs(x = "success(cumulative)")+
-     theme_bw()
+    theme_bw()
   return(plot)
 
- }
+}
 
 
 #' @title bin_variable
@@ -126,15 +125,15 @@ bin_cumulative <- function(trials,prob){
 #' @param prob probability of success
 #' @return return the binomial variable object
 #' @export
-#' @example
+#' @examples
 #' bin_variable(trials = 10, p = 0.3)
- bin_variable <- function(trials, prob){
-   check_trials(trials)
-   check_prob(prob)
-   binvar <- list(trials = trials, prob = prob)
-   class(binvar) <- c("binvar", "list")
-   return(binvar)
- }
+bin_variable <- function(trials, prob){
+  check_trials(trials)
+  check_prob(prob)
+  binvar <- list(trials = trials, prob = prob)
+  class(binvar) <- c("binvar", "list")
+  return(binvar)
+}
 
 
 #' @export
@@ -151,12 +150,12 @@ summary.binvar <- function(x) {
   trials <- x$trials
   prob <- x$prob
   summary.binvar <- list(trials = x$trials,
-                        prob = x$prob,
-                        mean = aux_mean(trials, prob),
-                        variance = aux_variance(trials, prob),
-                        mode = aux_mode(trials, prob),
-                        skewness = aux_skewness(trials, prob),
-                        kurtosis = aux_kurtosis(trials, prob))
+                         prob = x$prob,
+                         mean = aux_mean(trials, prob),
+                         variance = aux_variance(trials, prob),
+                         mode = aux_mode(trials, prob),
+                         skewness = aux_skewness(trials, prob),
+                         kurtosis = aux_kurtosis(trials, prob))
   class(summary.binvar) <- c("summary.binvar", "list")
   return(summary.binvar)
 }
@@ -250,15 +249,3 @@ bin_kurtosis <- function(trials,prob){
   check_prob(prob)
   return(aux_kurtosis(trials,prob))
 }
-
-
-
-
-
-
-
-
-
-
-
-

@@ -17,3 +17,6 @@ return the binomial variable object
 \description{
 creat the binomial random varable object
 }
+\examples{
+bin_variable(trials = 10, p = 0.3)
+}
